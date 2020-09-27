@@ -6,7 +6,7 @@ export const calculateTotal = (tripCost, options) => {
   let multiplier = 0;
   for (let option of pricing) {
     const currentValue = options[option.id];
-    if (typeof (currentValue) != 'undefined') {
+    if (currentValue) {
       if (Array.isArray(currentValue) && Array.isArray(option.values)) {
         for (let optionId of currentValue) {
           const value = option.values.filter(opt => opt.id == optionId)[0];
