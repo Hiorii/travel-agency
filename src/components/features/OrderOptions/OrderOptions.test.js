@@ -22,8 +22,10 @@ describe('Commponent OrderOptions', () => {
 
   it('should render correct prop name', () => {
     const expectedName = 'name';
+    const expectedType = 'icons';
+
     const component = shallow(
-      <OrderOptions name={expectedName} />
+      <OrderOptions name={expectedName} type={expectedType} />
     );
 
     const renderedName = component.find('.title').text();
@@ -74,14 +76,14 @@ for(let type in optionTypes){
     let component;
     let subcomponent;
     let renderedSubcomponent;
-    let mockSetOrderOption; /* 1 */
+    let mockSetOrderOption;
 
     beforeEach(() => {
-      mockSetOrderOption = jest.fn(); /* 2 */
+      mockSetOrderOption = jest.fn();
       component = shallow(
         <OrderOptions
           type={type}
-          setOrderOption={mockSetOrderOption} /* 3 */
+          setOrderOption={mockSetOrderOption}
           {...mockProps}
           {...mockPropsForType[type]}
         />
@@ -90,7 +92,7 @@ for(let type in optionTypes){
       renderedSubcomponent = subcomponent.dive();
     });
 
-    /* common tests */
+    // /* common tests */
     it('passes dummy test', () => {
       expect(1).toBe(1);
     });
@@ -128,14 +130,12 @@ for(let type in optionTypes){
         it('contains required components div with class icon', () => {
           const div = renderedSubcomponent.find('.icon');
           expect(div.hasClass('icon')).toBe(true);
-          expect(div.at(0).type()).toBe('div');
-          expect(div.at(1).type()).toBe('div');
-          expect(div.at(2).type()).toBe('div');
+          expect(div.length).toBe(3);
         });
         it('run setOrderOption function on click', () => {
           renderedSubcomponent.find('.icon').at(2).simulate('click');
           expect(mockSetOrderOption).toBeCalledTimes(1);
-          expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: testValue});
+          expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: testValue });
         });
         break;
       }
@@ -166,7 +166,6 @@ for(let type in optionTypes){
           expect(mockSetOrderOption).toBeCalledTimes(1);
           expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: testValueNumber });
         });
-
         break;
       }
 
@@ -180,7 +179,6 @@ for(let type in optionTypes){
           expect(mockSetOrderOption).toBeCalledTimes(1);
           expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: testValue });
         });
-
         break;
       }
 

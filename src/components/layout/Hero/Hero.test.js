@@ -6,7 +6,6 @@ describe('Component Hero', () => {
   it('should render without crashing', () => {
     const component = shallow(<Hero titleText='Lorem ipsum'  imageSrc='check'/>);
     expect(component).toBeTruthy();
-    console.log(component.debug());
   });
 
   it('should throw error without required props', () => {
@@ -29,5 +28,11 @@ describe('Component Hero', () => {
     expect(component.hasClass('component')).toBe(true);
     expect(component.hasClass('small')).toBe(true);
     expect(component.hasClass('dummy')).toBe(true);
+  });
+
+  it('should render HappyHourAd', () => {
+    const component = shallow(<Hero titleText='Lorem ipsum' imageSrc='Image path' />);
+
+    expect(component.exists('HappyHourAd')).toEqual(true);
   });
 });
