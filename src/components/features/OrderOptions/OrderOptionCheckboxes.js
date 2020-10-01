@@ -11,7 +11,7 @@ const newValueSet = (currentValue, id, checked) => {
   }
 };
 
-const OrderOptionCheckBoxes = ({ values, currentValue, setOptionValue }) => (
+const OrderOptionCheckboxes = ({ values, currentValue, setOptionValue }) => (
   <div className={styles.checkboxes}>
     {values.map((value) => (
       <label key={value.id}>
@@ -30,9 +30,9 @@ const OrderOptionCheckBoxes = ({ values, currentValue, setOptionValue }) => (
     ))}
   </div>
 );
-OrderOptionCheckBoxes.propTypes = {
+OrderOptionCheckboxes.propTypes = {
   values: PropTypes.array,
   currentValue: PropTypes.array,
   setOptionValue: PropTypes.func,
 };
-export default OrderOptionCheckBoxes;
+export default OrderOptionCheckboxes;
