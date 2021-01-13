@@ -15,7 +15,7 @@ describe('Commponent OrderOptions', () => {
     console.log(component.debug());
   });
 
-  it('should return empty object if called without required props', () => {
+  it('should return null if props type is false', () => {
     const component = shallow(<OrderOptions />);
     expect(component).toEqual({});
   });
