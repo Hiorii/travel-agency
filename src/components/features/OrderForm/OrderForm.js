@@ -33,14 +33,13 @@ const sendOrder = (options, tripCost, tripName, tripId, countryCode) => {
   };
 
   const url = settings.db.url + '/' + settings.db.endpoint.orders;
-  console.log(payload);
   const fetchOptions = {
     cache: 'no-cache',
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(payload),
+    body: payload,
   };
 
   fetch(url, fetchOptions)

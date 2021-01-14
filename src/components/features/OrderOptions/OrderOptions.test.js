@@ -17,7 +17,7 @@ describe('Commponent OrderOptions', () => {
 
   it('should return null if props type is false', () => {
     const component = shallow(<OrderOptions />);
-    expect(component).toEqual({});
+    expect(component).toBeNull();
   });
 
   it('should render correct prop name', () => {
