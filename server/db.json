@@ -11,6 +11,66 @@
       "start-date": "",
       "totalCost": "$5,381",
       "id": 1
+    },
+    {
+      "car-rental": "",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": "3",
+      "name": "sa",
+      "contact": "213123123",
+      "start-date": "",
+      "totalCost": "$100,131",
+      "id": 2
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": "4",
+      "name": "312312312",
+      "contact": "231123132",
+      "start-date": "",
+      "totalCost": "$120,457",
+      "id": 3
+    },
+    {
+      "car-rental": "",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "name": "dsadsa",
+      "contact": "dasdas",
+      "start-date": "",
+      "totalCost": "$40,053",
+      "id": 4
+    },
+    {
+      "car-rental": "",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "name": "dsasdasda",
+      "contact": "adsdsasda",
+      "start-date": "",
+      "totalCost": "$40,053",
+      "id": 5
+    },
+    {
+      "car-rental": "",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "name": "asd",
+      "contact": "dasdsa",
+      "start-date": "",
+      "totalCost": "$5,381",
+      "id": 6
     }
   ]
 }
